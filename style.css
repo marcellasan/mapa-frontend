@@ -1,0 +1,164 @@
+/* Variáveis de cores para manter o design consistente */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #18bc9c;
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+}
+
+/* Reset e estilos base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilização do Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--secondary-color);
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #ecf0f1;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Layout Principal com Flexbox (Responsivo) */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+main {
+    flex: 3;
+    min-width: 300px;
+}
+
+aside {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+/* Seções e Artigos */
+section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2, h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+article {
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 0 8px 8px 0;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+aside ul {
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+aside a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+aside a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+}
